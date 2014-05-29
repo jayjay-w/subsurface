@@ -41,6 +41,7 @@
 #include "worldmap-save.h"
 #include "updatemanager.h"
 #include "planner.h"
+#include "configuredivecomputerdialog.h"
 #ifndef NO_PRINTING
 #include <QPrintDialog>
 #include "printdialog.h"
@@ -1295,4 +1296,10 @@ void MainWindow::setEnabledToolbar(bool arg1)
 		<< ui.profPO2 << ui.profRuler << ui.profSAC << ui.profScaled << ui.profTogglePicture;
 	Q_FOREACH(QToolButton *b, toolBar)
 		b->setEnabled(arg1);
+}
+
+void MainWindow::on_actionConfigure_Dive_Computer_triggered()
+{
+	ConfigureDiveComputerDialog *dcConfig = new ConfigureDiveComputerDialog(this);
+    dcConfig->show();
 }
