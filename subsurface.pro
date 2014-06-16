@@ -88,7 +88,6 @@ HEADERS = \
 	qt-ui/usersurvey.h \
 	subsurfacesysinfo.h \
 	qt-ui/configuredivecomputerdialog.h \
-	qt-ui/configuredivecomputerdialog.h \
 	qt-ui/configuredivecomputer.h \
 	qt-ui/configuredivecomputerthreads.h \
 	qt-ui/devicedetails.h
@@ -171,7 +170,6 @@ SOURCES =  \
 	qt-ui/divelogexportdialog.cpp \
 	qt-ui/usersurvey.cpp \
 	subsurfacesysinfo.cpp \
-	qt-ui/configuredivecomputerdialog.cpp \
 	qt-ui/configuredivecomputerdialog.cpp \
 	qt-ui/configuredivecomputer.cpp \
 	qt-ui/configuredivecomputerthreads.cpp \
