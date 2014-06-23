@@ -417,6 +417,11 @@ bool ConfigureDiveComputer::restoreXMLBackup(QString fileName, DeviceDetails *de
 	return true;
 }
 
+void ConfigureDiveComputer::startFirmwareUpdate(QString fileName, DeviceDetails *details, QString errorText)
+{
+
+}
+
 void ConfigureDiveComputer::setState(ConfigureDiveComputer::states newState)
 {
 	currentState = newState;

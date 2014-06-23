@@ -34,6 +34,7 @@ public:
 	void fetchDeviceDetails();
 	bool saveXMLBackup(QString fileName, DeviceDetails *details, device_data_t *data, QString errorText);
 	bool restoreXMLBackup(QString fileName, DeviceDetails *details, QString errorText);
+	void startFirmwareUpdate(QString fileName, DeviceDetails *details, QString errorText);
 signals:
 	void message(QString msg);
 	void error(QString err);

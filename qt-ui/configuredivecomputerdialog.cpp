@@ -451,3 +451,16 @@ void ConfigureDiveComputerDialog::on_tabWidget_currentChanged(int index)
 		dcType = DC_TYPE_UEMIS;
 	fill_device_list(dcType);
 }
+
+void ConfigureDiveComputerDialog::on_updateFirmwareButton_clicked()
+{
+	QString filename = existing_filename ?: prefs.default_filename;
+	QFileInfo fi(filename);
+	filename = fi.absolutePath();
+	QString firmwarePath = QFileDialog::getSaveFileName(this, tr("Select firmware file"),
+							  filename, tr("All files (*.*)")
+							  );
+	if (!firmwarePath.isEmpty()) {
+
+	}
+}
