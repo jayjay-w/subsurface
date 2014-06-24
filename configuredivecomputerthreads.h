@@ -37,4 +37,19 @@ private:
 	DeviceDetails *m_deviceDetails;
 };
 
+class FirmwareUpdateThread : public QThread {
+	Q_OBJECT
+public:
+	FirmwareUpdateThread(QObject *parent, device_data_t *data, QString fileName);
+	virtual void run();
+	QString lastError;
+signals:
+	void progress(int percent);
+	void message(QString msg);
+	void error(QString err);
+private:
+	device_data_t *m_data;
+	QString m_fileName;
+};
+
 #endif // CONFIGUREDIVECOMPUTERTHREADS_H

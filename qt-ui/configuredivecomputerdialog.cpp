@@ -461,6 +461,8 @@ void ConfigureDiveComputerDialog::on_updateFirmwareButton_clicked()
 							  filename, tr("All files (*.*)")
 							  );
 	if (!firmwarePath.isEmpty()) {
-
+		getDeviceData();
+		QString errText;
+		config->startFirmwareUpdate(firmwarePath, &device_data, errText);
 	}
 }
