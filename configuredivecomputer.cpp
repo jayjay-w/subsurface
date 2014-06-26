@@ -417,7 +417,7 @@ bool ConfigureDiveComputer::restoreXMLBackup(QString fileName, DeviceDetails *de
 	return true;
 }
 
-void ConfigureDiveComputer::startFirmwareUpdate(QString fileName, DeviceDetails *details, QString errorText)
+void ConfigureDiveComputer::startFirmwareUpdate(QString fileName, device_data_t *data, QString errorText)
 {
 
 }
