@@ -486,7 +486,7 @@ void FirmwareUpdateThread::run()
 		switch (dc_device_get_type(m_data->device)) {
 		case DC_FAMILY_HW_OSTC3:
 			supported = true;
-			hw_ostc3_device_fwupdate(m_data->device, m_fileName.toUtf8().data());
+			//hw_ostc3_device_fwupdate(m_data->device, m_fileName.toUtf8().data());
 			break;
 		}
 		dc_device_close(m_data->device);
