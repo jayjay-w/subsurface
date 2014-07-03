@@ -38,12 +38,12 @@ ConfigureDiveComputerDialog::ConfigureDiveComputerDialog(QWidget *parent) :
 
 	deviceDetails = new DeviceDetails(this);
 	config = new ConfigureDiveComputer(this);
-	connect (config, SIGNAL(error(QString)), this, SLOT(configError(QString)));
-	connect (config, SIGNAL(message(QString)), this, SLOT(configMessage(QString)));
-	connect (config, SIGNAL(readFinished()), this, SLOT(deviceReadFinished()));
-	connect (config, SIGNAL(deviceDetailsChanged(DeviceDetails*)),
+	connect(config, SIGNAL(error(QString)), this, SLOT(configError(QString)));
+	connect(config, SIGNAL(message(QString)), this, SLOT(configMessage(QString)));
+	connect(config, SIGNAL(readFinished()), this, SLOT(deviceReadFinished()));
+	connect(config, SIGNAL(deviceDetailsChanged(DeviceDetails*)),
 		 this, SLOT(deviceDetailsReceived(DeviceDetails*)));
-	connect (ui->retrieveDetails, SIGNAL(clicked()), this, SLOT(readSettings()));
+	connect(ui->retrieveDetails, SIGNAL(clicked()), this, SLOT(readSettings()));
 
 	memset(&device_data, 0, sizeof(device_data));
 	fill_computer_list();
