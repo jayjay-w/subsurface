@@ -441,7 +441,7 @@ void ConfigureDiveComputerDialog::on_updateFirmwareButton_clicked()
 	QString filename = existing_filename ?: prefs.default_filename;
 	QFileInfo fi(filename);
 	filename = fi.absolutePath();
-	QString firmwarePath = QFileDialog::getSaveFileName(this, tr("Select firmware file"),
+	QString firmwarePath = QFileDialog::getOpenFileName(this, tr("Select firmware file"),
 							  filename, tr("All files (*.*)")
 							  );
 	if (!firmwarePath.isEmpty()) {
