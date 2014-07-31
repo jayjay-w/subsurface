@@ -325,6 +325,7 @@ OTHER_FILES += $$DESKTOPFILE $$ICON $$MANPAGE $$XSLT_FILES $$DOC_FILES $$MARBLED
 
 include(subsurface-gen-version.pri)
 include(subsurface-install.pri)
+!include( ../Cryptopp562/cryptopp.pri ): error(Unable to find Crypto++ 5.6.2)
 
 # to debug planner issues
 #QMAKE_CFLAGS += -DDEBUG_PLAN=31
