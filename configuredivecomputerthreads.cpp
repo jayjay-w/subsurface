@@ -291,7 +291,7 @@ void ReadSettingsThread::run()
 				int fw = (fData[2] << 8) + fData[3];
 				m_deviceDetails->setFirmwareVersion(QString::number(fw));
 				QByteArray ar((char *)fData);
-				ar.chop(5);
+				ar.chop(7);
 				ar = ar.mid(4);
 				m_deviceDetails->setCustomText(ar.trimmed());
 			}
