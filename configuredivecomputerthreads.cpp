@@ -290,9 +290,7 @@ void ReadSettingsThread::run()
 				m_deviceDetails->setSerialNo(QString::number(serial));
 				int fw = (fData[2] << 8) + fData[3];
 				m_deviceDetails->setFirmwareVersion(QString::number(fw));
-				QByteArray ar((char *)fData);
-				ar.chop(7);
-				ar = ar.mid(4);
+				QByteArray ar((char *)fData + 4, 60); //60 is the maximum size of custom text
 				m_deviceDetails->setCustomText(ar.trimmed());
 			}
 
